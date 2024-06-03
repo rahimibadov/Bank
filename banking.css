@@ -1,0 +1,818 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+::selection {
+    color: #fff;
+    background: blueviolet;
+}
+
+/* header started */
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("./images/header-background-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d7d4d4;
+}
+
+
+
+header nav .logobox {
+    width: 170px;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+header nav .logobox i {
+    font-size: 40px;
+    color: #0096FF;
+    text-shadow: 0 0 40px yellow,
+}
+
+header nav .logobox span {
+    font-size: 35px;
+    color: #0096FF;
+    font-weight: 700;
+    text-shadow: 0 0 35px white,
+}
+
+header nav ul {
+    width: 60%;
+    height: inherit;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul li {
+    width: 130px;
+    height: 45px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header nav ul li a {
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+header nav  #hamburger {
+    font-size: 35px;
+    color: black;
+    display: none;
+  }
+  
+header nav #close-btn{
+    font-size: 35px;
+    color: black;
+    display: none;
+  }
+  
+
+
+@media only screen and (max-width:850px) {
+
+    header nav ul li a {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    header nav .logobox {
+        width: 140px;
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width:700px) {
+
+        /*todo  ==NAV RESPONSIVE== */
+      
+        header nav ul {
+          display: none;
+        }
+      
+      
+        header nav #hamburger {
+          display: block;
+        }
+      
+        .showData {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 100px;
+          right: 0%;
+          background:blueviolet;
+          font-weight: 600;
+          width: 30%;
+          height: 280px;
+          gap: 15px;
+        }
+        header nav ul li a {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+}
+
+header .signin-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 150px 80px;
+}
+
+
+header .signin-box .change-text {
+    font-size: 40px;
+    font-weight: 600;
+    color: blueviolet;
+}
+
+header .signin-box .change-text h3 {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+}
+
+header .signin-box .change-text h3 .word {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    color: #0096FF;
+}
+
+header .signin-box .change-text h3 .word .letter {
+    transform-origin: center center 25px;
+}
+
+header .signin-box .change-text h3 .word .letter.out {
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+header .signin-box .change-text h3 .word .letter.in {
+    transition: 0.38s ease;
+}
+
+header .signin-box .change-text h3 .word .letter.behind {
+    transform: rotateX(-90deg);
+}
+
+header .signin-box button {
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    padding: 8px 18px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: ease-out 0.4s;
+}
+
+header .signin-box button:hover {
+    box-shadow: inset 400px 0 0 0 blueviolet;
+    color: white;
+}
+
+
+@media only screen and (max-width:580px) {
+    header .signin-box {
+        width: 65%;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    header .signin-box {
+        width: 90%;
+        margin-left: 5px;
+    }
+
+}
+
+/* header end */
+
+/* main started */
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .sec-1 {
+    width: 85%;
+    padding: 25px 0 45px 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+main .sec-1 .sec-1-boxes {
+    width: 25%;
+    padding: 10px 3px 10px 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 1px;
+
+}
+
+main .sec-1 .sec-1-boxes i {
+    font-size: 40px;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+main .sec-1 .sec-1-boxes span:nth-of-type(1) {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+main .sec-1 .sec-1-boxes span:nth-of-type(2) {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+main .sec-1 .sec-1-boxes a {
+    color: orange;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width:650px) {
+    main .sec-1 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        padding: 0 0 160px 0;
+    }
+
+    main .sec-1 .sec-1-boxes {
+        width: 240px;
+
+    }
+}
+
+@media only screen and (max-width:580px) {
+    main .sec-1 .sec-1-boxes {
+        width: 100%;
+    }
+
+    main .sec-1 {
+        padding: 0 0 140px 0;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    main .sec-1 {
+        padding: 0 0 110px 0;
+    }
+}
+
+
+/* section-2 started */
+
+main .sec-2 {
+    width: 100%;
+    /* height: 330px; */
+    background-color: rgb(231, 227, 227);
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+main .sec-2 h2 {
+    color: blueviolet;
+}
+
+.my-skills-typing {
+    color: #0096FF;
+}
+
+main .sec-2 .signin-box-2image {
+    width: 45%;
+    height: 300px;
+    position: relative;
+    z-index: 0;
+
+
+}
+
+main .sec-2 .signin-box-2image img {
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+    z-index: -10;
+
+}
+
+@media only screen and (max-width:800px) {
+
+    main .sec-2 .signin-box-2image img {
+        width: 240px;
+        height: 290px;
+    }
+
+}
+
+@media only screen and (max-width:650px) {
+    main .sec-2 {
+        flex-direction: column-reverse;
+    }
+
+    main .sec-2 .signin-box-2image {
+        width: 85%;
+        padding: 10px 0 10px 0;
+
+    }
+
+    main .sec-2 .signin-box-2image img {
+        width: 230px;
+        height: 260px;
+        left: 100px;
+        right: 100px;
+
+    }
+    main .sec-2 h2 {
+        font-size: 20px;
+    }
+
+
+}
+
+@media only screen and (max-width:450px) {
+    main .sec-2 .signin-box-2image img {
+        width: 180px;
+        height: 215px;
+        left: 50px;
+    }
+
+}
+
+
+
+/* section 2 end */
+
+/* section 3 started */
+main .sec-3 {
+    background-image: url("./images/40899936-stock-exchange-background.jpg");
+    background-position: center;
+    padding: 30px;
+
+}
+
+main .sec-3 h1 {
+    animation: loopText 5s infinite linear;
+    color: white;
+    font-size: 30px;
+}
+
+
+
+@keyframes loopText {
+
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+
+}
+
+/*^ currency exchnge start */
+
+.exchange-main {
+    width: 25vw;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: blueviolet;
+    color: rgb(10, 10, 10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.exchange-main input {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.exchange-main .row {
+    width: 100%;
+    gap: 7px;
+}
+
+.row .from-select {
+    display: flex;
+    width: 100%;
+}
+
+.row .to-select {
+    width: 100%;
+    display: flex;
+    border: 1px solid blueviolet;
+}
+
+.from-select .from,
+.to-select .to {
+    width: 20%;
+    height: 35px;
+    background-color: #d7d4d4;
+}
+
+.from-countries,
+.to-countries {
+    width: 80%;
+}
+
+
+label {
+    font-size: 20px;
+    color: white;
+}
+
+.text-center {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.convert-btn,
+.reset-btn {
+    width: 45%;
+    height: 35px;
+    background-color: #0096FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+#finalAmount {
+    font-family: 'Lobster', cursive;
+    display: none;
+    margin: 20px auto;
+}
+
+#finalAmount h2 {
+    font-size: 30px;
+    color: white;
+}
+
+@media only screen and (max-width:1200px) {
+    .exchange-main {
+        width: 35vw;
+        padding: 20px;
+        border-radius: 10px;
+
+    }
+}
+
+@media only screen and (max-width:750px) {
+    .exchange-main {
+        width: 50vw;
+        padding: 20px;
+
+
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .exchange-main {
+        width: 55vw;
+
+    }
+    
+}
+
+/*^ currency exchnge end */
+
+/* sec-3 end */
+
+/* sec-4 started */
+.sec-4 {
+    background: linear-gradient(to right, blueviolet, #0096FF);
+    padding: 30px;
+}
+
+#slider {
+    width: 720px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;
+
+}
+
+/*the sildeer div has a defined width and height which acts as a screen inside another screen*/
+
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+/*the list inside has a greater width and height to cover all the slideX with a display block type*/
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
+}
+
+
+/*Each slid has the same width as that of the slider hence covering the whole span*/
+
+.slide1 {
+    background-image: url("./images/slide1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide2 {
+    background-image: url("./images/slide2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide3 {
+    background-image: url("./images/slide3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide4 {
+    background-image: url("./images/slide4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide5 {
+    background-image: url("./images/slide5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+@media only screen and (max-width:900px) {
+    #slider {
+        width: 550px;
+
+    }
+}
+@media only screen and (max-width:700px) {
+    #slider {
+        width: 400px;
+
+    }
+}
+@media only screen and (max-width:500px) {
+    #slider {
+        width: 300px;
+
+    }
+}
+
+
+
+
+
+/* sec-4 end */
+
+/* main end */
+
+
+
+
+
+/* footer started */
+
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    /* justify-content: center;
+    align-items: center; */
+
+}
+
+footer .footer-1 {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+footer .footer-1 img {
+    width: 5%;
+}
+
+@media only screen and (max-width:1100px) {
+    footer .footer-1 img {
+        height: 65px;
+
+    }
+}
+
+
+@media only screen and (max-width:1000px) {
+    footer .footer-1 img {
+        height: 50px;
+
+    }
+}
+
+
+
+@media only screen and (max-width:800px) {
+    footer .footer-1 img {
+        height: 40px;
+    }
+}
+
+
+@media only screen and (max-width:700px) {
+    footer .footer-1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 0 10px 0;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    footer .footer-1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    footer .footer-1 img {
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    footer .footer-1 img {
+        width: 12%;
+    }
+}
+
+/* footer-1 end */
+
+
+/* footer-2 started */
+
+footer .footer-2 {
+    width: 100%;
+    /* height: 250px; */
+    background: linear-gradient(300deg, blueviolet, rgb(70, 6, 70));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+footer .footer-2 .footer-2-above {
+    width: 40%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding-top: 50px; */
+    padding: 5px 0 5px 0;
+}
+
+
+footer .footer-2 .footer-2-above i {
+    font-size: 40px;
+    color: white;
+}
+
+
+footer .footer-2 .footer-2-below {
+    width: 100%;
+    /* height: 150px; */
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-2 .footer-2-below ul {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0 50px 0;
+}
+
+
+footer .footer-2.footer-2-below ul li {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer .footer-2 .footer-2-below ul li a {
+    font-size: 20px;
+    color: white;
+}
+
+footer .footer-2 .footer-2-below ul li a i {
+    font-size: 40px;
+    color: white;
+}
+
+@media only screen and (max-width:700px) {
+    footer .footer-2 .footer-2-below ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0 20px 0;
+
+    }
+
+    footer .footer-2 .footer-2-below ul li {
+        margin: 5px 0 5px 0;
+    }
+}
+
+
+
+
+
+
+
+/* footer end */
